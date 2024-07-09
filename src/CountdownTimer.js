@@ -47,11 +47,11 @@ const CountdownTimer = () => {
       const totalMinutes = Math.floor((endDate.getTime() - new Date().getTime()) / (1000 * 60));
       const totalSeconds = Math.floor((endDate.getTime() - new Date().getTime()) / 1000);
 
-      const formattedEndDate = endDate.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric',
-      });
+      const day = endDate.getDate();
+      const month = endDate.toLocaleDateString('en-GB', { month: 'long' });
+      const year = endDate.getFullYear();
+      const formattedEndDate = `${day} ${month} ${year}`;
+
       const formattedEndTime = endDate.toLocaleTimeString('en-GB', {
         hour: '2-digit',
         minute: '2-digit',
