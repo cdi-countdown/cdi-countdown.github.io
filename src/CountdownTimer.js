@@ -94,7 +94,7 @@ const CountdownTimer = () => {
             </button>
           </div>
           <div className={`info-message ${showInfo ? 'show' : ''}`}>
-            This webpage has been created from scratch by GP with the help of GenAI to escape the tedious routines of MS Office. It was modified by LU.
+            This webpage has been created from scratch by GP with the help of GenAI. It was modified by LU.
           </div>
         </div>
       );
