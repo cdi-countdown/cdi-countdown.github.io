@@ -6,8 +6,8 @@ import './App.css';
 import cdiImage from './cdi.png';
 
 const CountdownTimer = () => {
-  const startDate = useMemo(() => new Date('2023-09-01T00:00:00+02:00'), []);
-  const endDate = useMemo(() => new Date('2024-06-28T15:00:00+02:00'), []);
+  const startDate = useMemo(() => new Date('2024-01-09T09:00:00+01:00'), []);
+  const endDate = useMemo(() => new Date('2024-11-08T15:00:00+01:00'), []);
   const [completionRate, setCompletionRate] = useState(0);
   const [showInfo, setShowInfo] = useState(false);
   const [daysLapsed, setDaysLapsed] = useState(0);
@@ -59,7 +59,7 @@ const CountdownTimer = () => {
 
       return (
         <div>
-          <h1>CDI for September 23 Intake will end in</h1>
+          <h1>CDI for January 24 Intake will end in</h1>
           <div className="countdown">
             {days} days {hours} hours {minutes} minutes {seconds} seconds
           </div>
@@ -80,7 +80,7 @@ const CountdownTimer = () => {
             <div className="doughnut-wrapper">
               <h3>Days Lapsed</h3>
               <div className="completion-rate">
-                {daysLapsed} days
+                {daysLapsed} / 304 days
               </div>
               <DoughnutWithDynamicValues />
             </div>
@@ -94,7 +94,7 @@ const CountdownTimer = () => {
             </button>
           </div>
           <div className={`info-message ${showInfo ? 'show' : ''}`}>
-            This webpage has been created from scratch by GP with the help of GenAI to escape the tedious routines of MS Office
+            This webpage has been created from scratch by GP with the help of GenAI to escape the tedious routines of MS Office. It was modified by LU.
           </div>
         </div>
       );
